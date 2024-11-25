@@ -1,6 +1,6 @@
 {
-    "name": "db-tools-bundle/pack-template",
-    "description": "An example pack of anonymizers for the DbToolsBundle",
+    "name": "db-tools-bundle/pack-faker",
+    "description": "Integrates FakerPHP/Faker to DbToolsBundle",
     "type": "db-tools-bundle-pack",
     "license": "MIT",
     "authors": [
@@ -13,9 +13,11 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
-        "makinacorpus/db-tools-bundle": "^1.2.0"
+        "fakerphp/faker": "^1.24",
+        "makinacorpus/db-tools-bundle": "dev-faker-integration as 2.0.0"
     },
     "require-dev": {
+        "doctrine/dbal": "^4.2",
         "friendsofphp/php-cs-fixer": "^3.34",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.3",
@@ -24,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DbToolsBundle\\PackExample\\" : "src/"
+            "DbToolsBundle\\PackFaker\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DbToolsBundle\\PackExample\\Tests\\": "tests/"
+            "DbToolsBundle\\PackFaker\\Tests\\": "tests/"
         }
     },
     "config": {
